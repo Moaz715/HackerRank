@@ -1,0 +1,14 @@
+def swap_case(s):
+    lst = list(s)
+    for i in range(0,len(lst)):
+        if lst[i].isalpha() and lst[i].isupper():
+            lst[i] = lst[i].lower()
+        elif lst[i].isalpha() and lst[i].islower():
+            lst[i] = lst[i].upper()
+    s = ''.join(lst)
+    return s
+
+if __name__ == '__main__':
+    s = input()
+    result = swap_case(s)
+    print(result)
