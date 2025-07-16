@@ -1,0 +1,9 @@
+def ispal(num):
+    return num == num[::-1]
+
+n = int(input())
+lst = list(input().split())
+b1 = all(int(x) > 0 for x in lst)
+b2 = any(ispal(x) for x in lst)
+
+print(b1 and b2)
