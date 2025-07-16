@@ -1,0 +1,12 @@
+if __name__ == '__main__':
+    n, m= map(int,input().split())
+    lst = list(map(int,input().split()))
+    set1 = set(map(int,input().split()))
+    set2 = set(map(int,input().split()))
+    hp = 0
+    for num in lst:
+        if num in set1:
+            hp += 1
+        elif num in set2:
+            hp -= 1
+    print(hp)
