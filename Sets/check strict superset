@@ -1,0 +1,14 @@
+seta = set(map(int,input().split()))
+n = int(input())
+setb = set()
+ans = 0
+while n:
+    setb = set(map(int,input().split()))
+    if seta.issuperset(setb) == False:
+        ans += 1
+    n-=1
+    
+if ans == 0:
+    print(True)
+else:
+    print(False)
