@@ -1,0 +1,8 @@
+t = int(input())
+while t:
+    n = int(input())
+    setta = set(map(int,input().split()))
+    m = int(input())
+    settb = set(map(int,input().split()))
+    print(setta.issubset(settb))
+    t-=1
