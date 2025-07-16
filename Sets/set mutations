@@ -1,0 +1,21 @@
+n = int(input())
+setta = set(map(int,input().split()))
+m = int(input())
+m *= 2
+settb = set()
+while m:
+    cmd = list(input().split())
+    if cmd[0] == "intersection_update":
+        settb = set(map(int,input().split()))
+        setta.intersection_update(settb)
+    elif cmd[0] == "update":
+        settb = set(map(int,input().split()))
+        setta.update(settb)
+    elif cmd[0] == "symmetric_difference_update":
+        settb = set(map(int,input().split()))
+        setta.symmetric_difference_update(settb)
+    elif cmd[0] == "difference_update":
+        settb = set(map(int,input().split()))
+        setta.difference_update(settb)
+    m-=2
+print(sum(setta))
