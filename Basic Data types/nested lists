@@ -1,0 +1,19 @@
+if __name__ == '__main__':
+    lst = []
+    for _ in range(int(input())):
+        name = input()
+        score = float(input())
+        lst.append([score, name])
+    
+    lst.sort()
+    mn = lst[0][0]
+    mn2 = lst[0][0]
+    h = False
+    for sub in lst:
+        if sub[0] > mn and h == False:
+            print(sub[1])
+            h = True
+            mn2 = sub[0]
+        elif sub[0] > mn and sub[0] == mn2:
+            print(sub[1])
+        
