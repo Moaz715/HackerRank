@@ -1,0 +1,11 @@
+if __name__ == '__main__':
+    m = int(input())
+    lst1 = list(map(int, input().split()))
+    n = int(input())
+    lst2 = list(map(int, input().split()))
+    set1 = set(lst1)
+    set2 = set(lst2)
+    lst3 = list(set1 ^ set2)
+    lst3.sort()
+    for n in lst3:
+        print(n)
